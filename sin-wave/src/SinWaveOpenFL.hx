@@ -5,6 +5,8 @@ class SinWaveOpenFL extends Sprite {
     public function new() {
         super();
 
-        trace('Sin Wave - OpenFL');
+        trace('OpenFL');
+
+        new SinWave();
     }
 }

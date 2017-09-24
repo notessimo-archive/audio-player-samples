@@ -1,0 +1,4 @@
+-lib audio-player
+-cp src
+-js bin/js/bin/app.js
+-main SinWave

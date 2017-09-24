@@ -1,39 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 
-  <meta title="Notessimo Viewer" package="com.failsafegames.notessimoviewer" version="1.0.13" company="FailSafe Games" />
+  <meta title="Sin Wave" package="com.failsafegames.sinwave" version="1.0.0" company="FailSafe Games" />
 
-  <meta package="com.failsafegames.mac-notessimoviewer" if="mac" />
+  <meta package="com.failsafegames.mac-sinwave" if="mac" />
 
   <window width="800" height="600" background="#FFFFFF" fps="60" />
   <window width="0" height="0" if="mobile" />
   <window width="0" height="0" background="" if="html5" />
   <window vsync="true" if="desktop" />
 
-  <app main="MainOpenFL" path="Export" file="NotessimoViewer" />
+  <app main="SinWaveOpenFL" path="bin/openfl" file="SinWave" />
 
   <source path="Source" />
 
   <haxelib name="openfl" />
-  <haxelib name="statistics" />
-  <haxelib name="trace-timer" />
-  <haxelib name="notessimo-player" />
-
-  <haxedef name="audio16" if="desktop" />
-  <haxedef name="audio16" if="mobile" />
-
-  <haxedef name="generic" />
-  <haxedef name="alchemy" />
-  <haxedef name="enterframe" />
-
-  <haxedef name="modular" if="html5z" />
-
-  <haxeflag name="-dce" value="full" if="html5 final" />
-  <haxeflag name="--no-traces" if="html5 final" />
-
-  <assets path="Server/assets" rename="assets" embed="false" />
-
-  <template path="templates" />
+  <haxelib name="audio-player" />
 
   <config:ios deployment="6.0" />
   <certificate team-id="P7K4SUSDX6" />
