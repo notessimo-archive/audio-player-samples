@@ -1,0 +1,15 @@
+-lib pixijs
+-lib notessimo-player
+-lib trace-timer
+-lib statistics
+-D pixijs
+-D generic
+-D enterframe
+-D webaudio
+#-D analyzer-optimize
+#-D analyzer
+-dce full
+#--no-traces
+-cp notessimo-viewer/Source
+-js notessimo-viewer/Server/js/notessimo-viewer-pixijs.js
+-main MainPixiJS
