@@ -12,7 +12,7 @@
 
   <app main="SinWaveOpenFL" path="bin/openfl" file="SinWave" />
 
-  <source path="Source" />
+  <source path="src" />
 
   <haxelib name="openfl" />
   <haxelib name="audio-player" />
