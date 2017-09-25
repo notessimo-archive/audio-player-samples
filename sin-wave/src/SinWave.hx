@@ -1,3 +1,7 @@
+import haxe.Timer;
+
+using NumberTools;
+
 class SinWave {
 
     public function new() {
@@ -7,16 +11,22 @@ class SinWave {
         var volume = 0.3;
         var frequency = 425;
 
-        AudioPlayer
+        // Create a sin wave audio source
+        var audio = AudioPlayer
             .create()
-            .useGenerator((out, sampleRate) -> for (i in 0...out.length >> 1) {
-                var sin = MathUtils.sin( 2 * MathUtils.PI * n * frequency / sampleRate ) * volume;
+            .useGenerator((out, sampleRate) -> for( i in 0...out.length >> 1 ) {
+                var sin = MathUtils.sin(2 * MathUtils.PI * n * frequency / sampleRate) * volume;
                 out.set(i*2, sin);
                 out.set(i*2 + 1, sin);
                 n++;
-            });
+            })
+            .play();
+
+        // Stop it after 3 seconds
+        Timer.delay(() -> audio.stop(), DateTools.seconds(3).toInt());
     }
 
+    // Main entry point
     static public function main() {
         new SinWave();
     }
