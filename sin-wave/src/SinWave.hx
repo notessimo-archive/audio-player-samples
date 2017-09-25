@@ -16,8 +16,8 @@ class SinWave {
             .create()
             .useGenerator((out, sampleRate) -> for( i in 0...out.length >> 1 ) {
                 var sin = MathUtils.sin(2 * MathUtils.PI * n * frequency / sampleRate) * volume;
-                out.set(i*2, sin);
-                out.set(i*2 + 1, sin);
+                out.set(i*2, sin); // Left
+                out.set(i*2 + 1, sin); // Right
                 n++;
             })
             .play();
