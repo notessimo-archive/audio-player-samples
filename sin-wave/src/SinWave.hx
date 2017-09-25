@@ -23,7 +23,7 @@ class SinWave {
             .play();
 
         // Stop it after 3 seconds
-        Timer.delay(() -> audio.stop(), DateTools.seconds(3).toInt());
+        Timer.delay(() -> audio.stop(), DateTools.seconds(3).int());
     }
 
     // Main entry point
